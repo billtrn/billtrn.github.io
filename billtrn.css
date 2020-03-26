@@ -1,3 +1,18 @@
+@font-face {
+    font-family: BigJohn;
+    src: url(BigJohnPRO-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: SmallJohn;
+    src: url(BigJohnPRO-Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: Sequel;
+    src: url(Sequel_Demo.ttf) format("opentype");
+}
+
 body {
     background-image: url(hanoi.jpg);
     background-repeat: no-repeat;
@@ -16,7 +31,7 @@ body {
     padding-right: 50px;
     text-decoration: none;
     font-size: larger;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;           
+    font-family: 'Sequel';           
 }
 
 #menu a:hover {
@@ -30,7 +45,7 @@ body {
     padding-right: 50px;
     text-decoration: none;
     font-size: larger;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;           
+    font-family: 'Sequel';           
 }
 
 #menu-contact a:hover {
@@ -42,7 +57,7 @@ body {
     text-align: center;
     margin: auto;
     padding-top: 70px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Sequel';
 
 }
 #name {
@@ -51,7 +66,7 @@ body {
     text-align: center;
     margin: auto;
     padding-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Sequel';
 }
 
 #intro {
@@ -60,7 +75,7 @@ body {
     text-align: center;
     margin: auto;
     padding-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Sequel';
 }
 
 .social {
@@ -89,7 +104,7 @@ body {
     text-align: center;
     margin: auto;
     padding-top: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'BigJohn';
 
 }
 
@@ -99,7 +114,7 @@ body {
     padding-left: 40%;
     margin: auto;
     padding-top: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'BigJohn';
 
 }
 
@@ -109,7 +124,7 @@ body {
     padding-left: 30%;
     margin: auto;
     padding-top: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'BigJohn';
 
 }
 
@@ -121,13 +136,13 @@ body {
     width: 229px;
     height: 229px;
     border: 2px solid white;
-    margin: 25px 30px 40px 10px;
+    margin: 25px 30px 60px 10px;
     float: left;
   }
   .description {
     display: inline;
-    font-size: 20px;
-    font-family: 'Lucida Sans';
+    font-size: 22px;
+    font-family: 'SmallJohn';
     text-align: justify;
     color: whitesmoke;
   }
@@ -138,23 +153,23 @@ body {
 }
 
 .music-title {
-    padding-top: 10px;
+    padding-top: 0px;
     text-align: center;
-    font-family: 'Lucida Sans';
+    font-family: 'BigJohn';
     font-size: 30px;
     color: whitesmoke;
 }
 
 .music-des {
     text-align: center;
-    font-family: 'Lucida Sans';
-    font-size: 15px;
-    color: whitesmoke
+    font-family: 'SmallJohn';
+    font-size: 22px;
+    color: pink;
 }
 
 #contact-intro {
     text-align: center;
-    font-family: 'Lucida Sans';
+    font-family: 'Coves';
     font-size: 23px;
     color: whitesmoke;
 }
@@ -163,7 +178,7 @@ body {
     font-size: 25px;
     color:white;
     font-style: bold;
-    font-family: 'Lucida Sans';
+    font-family: 'BigJohn';
     padding-left: 80px;
     padding-top: 5px;
 }
@@ -171,7 +186,7 @@ body {
 #info {
     font-size: 20px;
     color:white;
-    font-family: 'Lucida Sans';
+    font-family: 'BigJohn';
     padding-left: 80px;
     margin-top: -10px;
 }
@@ -234,7 +249,7 @@ body {
     width: 30%;
 }
 .element {
-    font-family: 'Lucida Sans';
+    font-family: 'SmallJohn';
     font-size: 20px;
     text-align: left;
     padding-left: 15px;
