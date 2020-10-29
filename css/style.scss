@@ -1,0 +1,1246 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Personala
+	Theme URI: http://
+	Description: The Multi-Purpose Onepage Template
+	Author: his7am
+	Author URI: http://themeforest.net/user/his7am
+	Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+	== Table Of Content
+
+		01 Basic
+		02 Buttons
+		03 Navbar
+		04 Header
+		05 Hero
+		06 Resume
+		07 Services
+		08 Numbers
+		09 Portfolio
+		10 Testimonials
+		11 Blog
+		12 Contact
+		13 Footer
+		14 Responsive
+	
+
+---------------------------------------------------------------- */
+
+$main-color: #C49B66;
+$tablet-sm-screen: 767px;
+$desk-md-screen: 991px;
+
+/* ----------------------------------------------------------------
+				01 Basic
+-----------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+	outline: none !important;
+	list-style: none;
+}
+
+body {
+	color: #333;
+	line-height: 1.3;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden !important;
+}
+
+.dark-theme{
+	background: #131414;
+	color: #eee;
+
+	.title{
+
+		&:before{
+			background: #222;
+		}
+	}
+
+	.nav-scroll{
+		background: #181818;
+
+		.icon-bar{
+			color: #eee;
+		}
+
+		.navbar-nav{
+			
+			.nav-link{
+				color: #eee;
+			}
+		}
+
+		.logo{
+			color: #fff;
+
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+
+	.hero{
+
+		.hero-img{
+
+			&:after{
+				background: #181818;
+			}
+		}
+	}
+
+	.services{
+
+		.active{
+			border-color: #222;
+
+			&.bolt{
+
+				&:before, &:after{
+					background: #131414;
+				}
+			}
+		}
+
+		.bord{
+			border-color: #222;
+		}
+	}
+
+	.portfolio{
+
+		.item-img-overlay{
+
+			&:before, &:after{
+				background: #181818;
+			}
+		}
+	}
+
+	.blog{
+
+		.pitem{
+
+			.content{
+				background: #181818;
+
+				h3{
+					color: #ccc;
+				}
+
+				.more,p{
+					border-color: #222;
+				}
+			}
+		}
+	}
+
+	footer{
+		background: #181818;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  font-size: 15px;
+  color: #a3a3a3;
+  line-height: 1.6;
+  word-spacing: 1px;
+  margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+span, a, a:hover {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.section-head{
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.title{
+	display: inline-block;
+	font-size: 36px;
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 2;
+
+	&:after{
+		content: '';
+		width: 60px;
+		height: 1px;
+		background: $main-color;
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 30px);
+	}
+
+	&:before{
+		content: '';
+		width: 100%;
+		height: 1px;
+		background: rgba(1,1,1,.05);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.title-left{
+	text-align: left;
+	margin-bottom: 30px;
+
+	&:after{
+		left: 0;
+	}
+}
+
+.bg-gray{
+	background: #f7f7f7;
+
+	.title{
+
+		&:before{
+			background: #ddd;
+		}
+	}
+
+	.owl-theme .owl-dots .owl-dot span{
+		background: #777;
+	}
+}
+
+.o-hidden {
+	overflow: hidden;
+}
+
+.position-re {
+	position: relative;
+}
+
+.full-width{
+	width: 100% !important;
+}
+
+.bg-img{
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .title{
+
+		&:before{
+			background: rgba(255,255,255,.1);
+		}
+	}
+}
+
+.section-padding{
+  padding: 100px 0;
+}
+
+.section-ptb {
+	padding: 80px 0;
+}
+
+.section-pt {
+	padding: 80px 0 0;
+}
+
+.section-pb {
+	padding: 0 0 80px;
+}
+
+.valign{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+// Animate Headline
+
+.cd-headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 6rem;
+  }
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+
+/* xclip */
+
+.cd-headline.clip span {
+  display: inline-block;
+  padding: .2em 0;
+}
+
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 2px;
+  height: 70%;
+  background-color: #aebcb9;
+}
+
+.cd-headline.clip b {
+  opacity: 0;
+}
+
+.cd-headline b.is-visible {
+  opacity: 1;
+  font-weight: 900;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgba(150,150,150,.4);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span{
+	background: $main-color;
+}
+
+/* ----------------------------------------------------------------
+				02 Buttons
+-----------------------------------------------------------------*/
+
+.buton{
+	position: relative;
+	cursor: pointer;
+
+	button,a{
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		font-weight: 700;
+		height: 40px;
+		line-height: 40px;
+		width: 130px;
+		transform-style:preserve-3d;
+		position:relative;
+		transition:.3s;
+		box-shadow: 0px 5px 10px rgba(0,0,0,.1);
+		cursor: pointer;
+
+		&:before{
+			content:attr(back);
+			font-family: "Font Awesome\ 5 Free";
+			font-size: 18px;
+			position:absolute;
+			top:0;
+			left:0;
+			right: 0;
+			bottom: 0;
+			background: transparent;
+			color: $main-color;
+			border: 1px solid $main-color;
+			line-height: 38px;
+			transition:.3s;
+			transform-origin:bottom;
+			transform: translateY(-100%) rotateX(90deg);
+		}
+
+		&:after{
+			content:attr(front);
+			position:absolute;
+			top:0;
+			left:0;
+			right: 0;
+			bottom: 0;
+			background: $main-color;
+			color: #fff;
+			transition:.3s;
+			transform-origin:top;
+			transform:translateY(0) rotateX(0deg);
+		}
+
+		&:hover:before{
+			transform:translateY(0) rotateX(0deg);
+		}
+
+		&:hover:after{
+			transform:translateY(100%) rotateX(90deg);
+		}
+	}
+}
+
+.buton-bord{
+
+	button,a{
+
+		&:before{
+			background: $main-color;
+			color: #fff;
+		}
+
+		&:after{
+			background: transparent;
+			color: $main-color;
+			border: 1px solid $main-color;
+		}
+	}
+}
+
+.buton-lg{
+
+	button,a{
+		width: 160px;
+	}
+}
+
+.buton-dark{
+
+	button,a{
+
+		&:before{
+			color: #222;
+			border: 1px solid #222;
+		}
+
+		&:after{
+			background: #222;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				03 Navbar
+-----------------------------------------------------------------*/
+
+.navbar{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: transparent;
+	z-index: 9;
+
+	.icon-bar{
+		color: #fff;
+	}
+
+	.navbar-nav{
+		
+		.nav-link{
+			font-size: 13px;
+			font-weight: 600;
+			color: #eee;
+			letter-spacing: .5px;
+			margin: 15px 5px;
+			transition: all .5s;
+		}
+
+		.active{
+			color: $main-color !important;
+		}
+	}
+}
+
+.nav-scroll{
+	background: #fff;
+	border-bottom: 1px solid rgba(12,12,12,.04);
+	padding: 0;
+	position: fixed;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	transition: transform .5s;
+	transform: translateY(100px);
+
+	.icon-bar{
+		color: #222;
+	}
+
+	.navbar-nav{
+		
+		.nav-link{
+			color: #222;
+		}
+	}
+
+	.logo{
+		padding: 15px 0;
+		color: #111;
+
+		&:hover{
+			color: #111;
+		}
+	}
+}
+
+.logo{
+	padding: 15px 0;
+	width: 90px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+
+	&:hover{
+		color: #fff;
+	}
+}
+
+/* ----------------------------------------------------------------
+				04 Header
+-----------------------------------------------------------------*/
+
+.header{
+	min-height: 100vh;
+
+	.caption{
+		margin-top: 50px;
+
+		h2{
+			font-weight: 200;
+		}
+
+		h1{
+			margin: 10px 0;
+			font-size: 70px;
+		}
+	}
+
+	.arrow{
+		position: absolute;
+		bottom: 5vh;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		font-size: 13px;
+		z-index: 8;
+
+		i{
+			position: relative;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+
+			&:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255,255,255,.2);
+				border-radius: 50%;
+				z-index: -1;
+				transition: all .2s;
+			}
+
+			&:hover{
+
+				&:after{
+					transform: scale(1.2);
+					opacity: 0;
+					transition: all .5s;
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				05 Hero
+-----------------------------------------------------------------*/
+
+.hero{
+
+	.hero-img{
+		padding: 0 20px 0 0;
+		position: relative;
+		transition: all .4s;
+
+		&:hover{
+			padding: 0 0 0 20px;
+
+			&:after{
+				background: $main-color;
+				left: 5px;
+				top: -15px;
+				right: 15px;
+				bottom: 15px;
+			}
+		}
+
+		&:after{
+			content: '';
+			background: #f5f5f5;
+			position: absolute;
+			left: 15px;
+			right: 5px;
+			top: 15px;
+			bottom: -15px;
+			z-index: -1;
+			transition: all .5s;
+		}
+	}
+	
+	.content{
+
+		p{
+			margin-bottom: 15px;
+
+			span{
+				font-weight: 700;
+			}
+		}
+
+		.social-icon{
+
+			span{
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				font-size: 12px;
+				border: 1px solid #eee;
+				margin: 15px 5px 15px 0;
+				cursor: pointer;
+				transition: all .5s;
+
+				&:hover{
+					background: $main-color;
+					border-color: $main-color;
+					color: #fff;
+				}
+			}
+		}
+
+		.buton{
+			margin-top: 30px;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				06 Resume
+-----------------------------------------------------------------*/
+
+.resume{
+	background-attachment: fixed;
+	padding: 50px 0;
+
+	.title{
+		margin-bottom: 40px;
+		letter-spacing: 2px;
+	}
+
+	.item{
+
+		h5{
+			font-size: 25px;
+			font-weight: 400;
+		}
+
+		.icon{
+			font-size: 30px;
+			color: $main-color;
+			margin-bottom: 15px;
+		}
+
+		li{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			h6{
+				color: #eee;
+				font-size: 16px;
+				font-weight: 600;
+				font-family: inherit;
+				margin-bottom: 5px;
+			}
+
+			p{
+				color: #999;
+			}
+		}
+	}
+
+	.skills{
+
+		.skill{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			h6{
+				margin-bottom: 8px;
+				font-size: 14px;
+				font-weight: 400;
+
+				span{
+					padding: 4px 8px 0;
+					font-size: 10px;
+					float: right;
+					background: rgba(80,80,80,.3);
+					position: relative;
+					top: 8px;
+				}
+			}
+
+			.skills-progress{
+				position: relative;
+				width: 100%;
+				height: 4px;
+				background: rgba(80,80,80,.3);
+
+				span{
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 5%;
+					background: $main-color;
+					transition: all 1s;
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				07 Services
+-----------------------------------------------------------------*/
+
+.services{
+
+	.item{
+		text-align: center;
+		padding: 40px 15px;
+
+		.icon{
+			font-size: 40px;
+			color: $main-color;
+			margin-bottom: 30px;
+		}
+
+		h6{
+			font-size: 22px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.active{
+		border-right: 1px solid #eee;
+		border-left: 1px solid #eee;
+		position: relative;
+
+		&.bolt{
+
+			&:before, &:after{
+				content: '';
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				bottom: -15px;
+				z-index: 4;
+			}
+
+			&:before{
+				left: -15px;
+			}
+
+			&:after{
+				right: -15px;
+			}
+		}
+	}
+
+	.bord{
+		border-bottom: 1px solid #eee;
+	}
+}
+
+/* ----------------------------------------------------------------
+				08 Numbers
+-----------------------------------------------------------------*/
+
+.numbers{
+	padding: 50px 0;
+
+	.item{
+		text-align: center;
+
+		.icon{
+			font-size: 30px;
+			color: $main-color;
+			margin-bottom: 30px;
+		}
+
+		h2{
+			font-weight: 200;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				09 Portfolio
+-----------------------------------------------------------------*/
+
+.portfolio{
+	overflow: hidden;
+	
+	.filtering{
+
+		span{
+			padding: 8px 20px;
+			margin: 0 5px;
+			color: #777;
+			letter-spacing: 1px;
+			font-weight: 600;
+			font-size: 13px;
+			cursor: pointer;
+			border: 1px solid #eee;
+			border-radius: 10px;
+		}
+
+		.active{
+			color: #fff;
+			background: $main-color;
+			border-color: $main-color;
+
+			&:after{
+				bottom: 0;
+				top: calc(100% - 1px);
+				opacity: 1;
+			}
+
+			&:before{
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	.items{
+		padding: 0 15px;
+		margin-bottom: 30px;
+	}
+
+	.item-img{
+		position: relative;
+		overflow: hidden;
+
+		h5{
+			font-size: 18px;
+			position: relative;
+			transform: translateY(15px);
+			transition: all .6s;
+			opacity: 0;
+			z-index: 5;
+		}
+
+		h6{
+			color: $main-color;
+			font-size: 13px;
+			position: relative;
+			margin-bottom: 10px;
+			transform: translateY(-15px);
+			transition: all .6s;
+			opacity: 0;
+			z-index: 5;
+		}
+
+		.link{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			color: $main-color;
+			transition: all .5s;
+			z-index: 5;
+			opacity: 0;
+		}
+	}
+
+	.item-img-overlay{
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		background: transparent;
+		z-index: 2;
+
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 50%;
+			background: #fff;
+			transition: all .4s;
+		}
+
+		&:before{
+			left: 0;
+			top: 0;
+		}
+
+		&:after{
+			right: 0;
+			bottom: 0;
+		}
+
+		&:hover{
+
+			&:before, &:after{
+				width: 100%;
+			}
+		}
+
+		&:hover h6, &:hover h5, &:hover .link{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				10 Testimonials
+-----------------------------------------------------------------*/
+
+.testimonials{
+	background-attachment: fixed;
+
+	.icon{
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+
+	.citem{
+
+		p{
+			font-size: 18px;
+			word-spacing: 2px;
+			margin-bottom: 15px;
+		}
+
+		h5{
+			font-size: 16px;
+			display: inline-block;
+			padding-right: 10px;
+			margin-right: 10px;
+			position: relative;
+
+			&:after{
+				content: "|";
+				position: absolute;
+				right: -5px;
+				bottom: 4px;
+			}
+		}
+
+		h6{
+			display: inline-block;
+			font-weight: 400;
+			font-size: 14px;
+			margin: 15px 0;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				11 Blog
+-----------------------------------------------------------------*/
+
+.blog{
+
+	.owl-carousel .owl-stage-outer{
+		padding: 15px 0;
+	}
+
+	.pitem{
+		box-shadow: 0px 0px 30px -4px rgba(0,0,0,.1);
+
+		.post-img{
+			position: relative;
+
+			.tag{
+				position: absolute;
+				bottom: -15px;
+				right: 15px;
+				padding: 8px 22px;
+				font-size: 11px;
+				background: $main-color;
+				color: #fff;
+				box-shadow: 0px 0px 20px rgba(0,0,0,.05);
+			}
+		}
+
+		.content{
+			padding: 45px 15px 15px;
+			background: #fff;
+		}
+
+		h3{
+			font-size: 22px;
+			font-weight: 700;
+			color: #666;
+			margin-bottom: 15px;
+		}
+
+		p{
+			font-size: 14px;
+			padding-bottom: 30px;
+			border-bottom: 1px solid #f7f7f7;
+		}
+
+		.info{
+			padding-top: 15px;
+
+			span{
+				font-size: 12px;
+				color: #999;
+			}
+
+			.more{
+				color: $main-color;
+				border-bottom: 1px solid #eee;
+			}
+
+			.by{
+				float: right;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				12 Contact
+-----------------------------------------------------------------*/
+
+.contact{
+	background-attachment: fixed;
+
+	.form{
+		input[type='text'],
+		input[type='email'],
+		textarea{
+			width: 100%;
+			border: 1px solid rgba(255,255,255,.1);
+			padding: 10px;
+			background: rgba(10,10,10,.4);
+			color: #fff;
+			margin-bottom: 15px;
+		}
+
+		textarea{
+			height: 160px;
+			max-height: 160px;
+			max-width: 100%;
+		}
+
+		button{
+			background: transparent;
+			border: 0;
+		}
+	}
+
+	.info{
+		margin-top: 50px;
+
+		.item{
+
+			.icon{
+				float: left;
+				padding-top: 5px;
+				font-size: 25px;
+				color: $main-color;
+			}
+
+			.cont{
+				margin-left: 45px;
+				padding-left: 15px;
+				border-left: 1px solid rgba(200,200,200,.4);
+
+				h6{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+				13 Footer
+-----------------------------------------------------------------*/
+
+.footer{
+	padding: 50px 0;
+	background: #111;
+	text-align: center;
+
+	p{
+		font-size: 13px;
+	}
+}
+
+/* ----------------------------------------------------------------
+				14 Responsive
+-----------------------------------------------------------------*/
+
+@media screen and (max-width: $desk-md-screen){
+
+	.mb-md50{
+		margin-bottom: 50px;
+	}
+
+	.mb-md30{
+		margin-bottom: 30px;
+	}
+
+	.mb-md0{
+		margin-bottom: 0;
+	}
+
+	.navbar{
+
+		.navbar-collapse{
+			max-height: 320px;
+			overflow: auto;
+			background: #111;
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		.nav-link{
+			margin: 10px auto !important;
+		}
+	}
+
+	.nav-scroll{
+
+		.navbar-collapse{
+
+			.nav-link{
+				color: #fff !important;
+			}
+
+			.active{
+				color: $main-color !important;
+			}
+		}
+	}
+
+	.header{
+
+		.caption{
+
+			h1{
+				font-size: 50px;
+			}
+		}
+	}
+
+	.services{
+
+		.item{
+			padding: 0;
+		}
+
+		.active{
+			border:0;
+		}
+
+		.bord{
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet-sm-screen){
+
+	.mb-sm50{
+		margin-bottom: 50px;
+	}
+
+	.mb-sm30{
+		margin-bottom: 30px;
+	}
+
+}
+
+
+
+
+
+
