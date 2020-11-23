@@ -27,6 +27,12 @@
 		gtag('config', 'G-M005FH9J53');
 		</script>
 
+		<script>
+			function form_noti() {
+				  alert("Thanks for submitting! Will get back to you soon 😉");
+			}
+		</script>
+
 		<!-- Title  -->
 		<title>Bill Tran</title>
 
@@ -412,7 +418,7 @@
     					<h4 class="title">Let's Get In Touch</h4>
     				</div>
 
-    				<form class="form full-width" id="contact-form" method="post" action="contact.php">
+    				<form class="form full-width" id="contact-form" action="https://formspree.io/f/mpzojado" method="POST">
                         <div class="messages"></div>
 
                         <div class="controls">
@@ -448,7 +454,7 @@
                             	<div class="col-md-12">
                                     <div class="form-group">
                                         <span class="buton buton-lg">
-	                                    	<button type="submit" front="Send Message" back="&#xf35d;"></button>
+	                                    	<button type="submit" front="Send Message" onclick="form_noti()" back="&#xf35d;"></button>
 										</span>
                                     </div>
                                 </div>
@@ -493,7 +499,6 @@
     	</section>
     	<!-- End Contact ====
     	======================================= -->
-
 
     	<!-- =====================================
     	==== Start Footer -->
