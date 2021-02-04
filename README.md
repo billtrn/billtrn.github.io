@@ -1,3 +1,3 @@
-# My Personal Website
+# Personal Website
 
-Check out my personal site and learn more about me as a human being at https://billtrn.com/
+Check out my personal site at https://billtrn.com/
